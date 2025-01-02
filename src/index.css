@@ -5,10 +5,10 @@
 }
 
 :root {
-  --background-color: black;
-  --text-color: grey;
-  --navbar-background: #222222;
-  --navbar-text-color: grey;
+  --background-color: #121212;
+  --text-color: #f2f2f2;
+  --navbar-background: #0e1113;
+  --navbar-text-color: #dbe4e9;
   --footer-background: #222222;
   --footer-text-color: grey;
   --border-color:rgb(80, 80, 80);
@@ -16,10 +16,10 @@
 
 /* Light Mode */
 [data-theme='light'] {
-  --background-color: grey;
-  --text-color: #000000;
-  --navbar-background: rgb(77, 77, 77);
-  --navbar-text-color: #000000;
+  --background-color: #ffffff;
+  --text-color: #181c1f;
+  --navbar-background: #ffffff;
+  --navbar-text-color: #3f4345;
   --footer-background: rgb(77, 77, 77);
   --footer-text-color: #000000;
   --border-color: rgb(194, 194, 194);

@@ -10,7 +10,6 @@ import { Footer } from './components/Footer';
 import { Layout } from './components/Layout';
 import { Resume } from './pages/Resume';
 import { NotFound } from './pages/NotFound';
-import { Trees } from './pages/Trees';
 import { Sandbox } from './pages/Sandbox';
 import Cards from './pages/Cards';
 function App() {
@@ -40,7 +39,6 @@ function App() {
       <Route path="/projects" element={<Projects />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/resume" element={<Resume />} />
-      <Route path="/trees" element={<Trees />} />
       <Route path="/sandbox" element={<Sandbox />} />
       <Route path="/cards" element={<Cards />} />
       <Route path="*" element={<NotFound />} />

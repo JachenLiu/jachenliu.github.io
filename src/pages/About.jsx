@@ -3,8 +3,7 @@ import '../styles/About.css';
 export function About() {
   return (
     <div className="about">
-      <h1>About Me</h1>
-      <p> First thing I wanted to do was make a light and dark mode.</p>
+      <h1>Hi, I'm Jachen</h1>
       <p> Enjoy</p>
     </div>
   );
