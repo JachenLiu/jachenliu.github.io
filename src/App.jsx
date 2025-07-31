@@ -11,43 +11,37 @@ import { Layout } from './components/Layout';
 import { Resume } from './pages/Resume';
 import { NotFound } from './pages/NotFound';
 import { Trees } from './pages/Trees';
-import { Sandbox } from './pages/Sandbox';
-import Cards from './pages/Cards';
-function App() {
 
+function App() {
   const location = useLocation();
 
   useEffect(() => {
     const pageTitles = {
-      '/': 'Home - Jachen',
-      '/about': 'About - Jachen',
-      '/projects': 'Projects - Jachen',
-      '/contact': 'Contact - Jachen',
-      '/resume': 'Resume - Jachen',
-      '/trees': 'Trees - Jachen',
-      '/sandbox': 'Sandbox - Jachen',
-      '/cards' : 'Cards - Jachen',
+      '/': 'Jachen Liu - Software Engineer',
+      '/about': 'About - Jachen Liu',
+      '/projects': 'Projects - Jachen Liu',
+      '/contact': 'Contact - Jachen Liu',
+      '/resume': 'Resume - Jachen Liu',
+      '/trees': 'Trees Visualization - Jachen Liu',
     };
-    document.title = pageTitles[location.pathname] || 'Jachen';
+    document.title = pageTitles[location.pathname] || 'Jachen Liu';
   }, [location]);
 
   return (
     <div className='app-container'>
       <Layout>
-      <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/resume" element={<Resume />} />
-      <Route path="/trees" element={<Trees />} />
-      <Route path="/sandbox" element={<Sandbox />} />
-      <Route path="/cards" element={<Cards />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/trees" element={<Trees />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </Layout>
     </div>
   );
 }
 
-export default App
+export default App;

@@ -1,12 +1,345 @@
-.home {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .home h1 {
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 6rem 0 4rem;
+  background: var(--gradient-sunrise);
+  border-radius: 0 0 3rem 3rem;
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .hero {
+  background: var(--gradient-sunset);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(193, 154, 107, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.accent-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-category {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow-medium);
+}
+
+.skill-category h3 {
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px var(--shadow-medium);
+}
+
+.project-image {
+  height: 200px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-placeholder {
+  font-size: 4rem;
+  opacity: 0.7;
+}
+
+.project-content h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.project-content p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: var(--accent-primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Experience Timeline */
+.experience-timeline {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-light);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 3rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 0.5rem;
+  top: 1rem;
+  width: 1rem;
+  height: 1rem;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  border: 3px solid var(--bg-primary);
+}
+
+.timeline-content h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-company {
+  color: var(--accent-primary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* CTA Section */
+.cta-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--gradient-primary);
+  border: 1px solid var(--border-light);
+}
+
+.cta-card h2 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.cta-card p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-primary);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
     font-size: 2.5rem;
   }
   
-  .home p {
-    font-size: 1.2rem;
+  .hero-subtitle {
+    font-size: 1.25rem;
   }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .experience-timeline::before {
+    left: 0.5rem;
+  }
+  
+  .timeline-item {
+    padding-left: 2rem;
+  }
+  
+  .timeline-marker {
+    left: 0;
+  }
+  
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4rem 0 2rem;
+  }
+  
+  .hero-content {
+    padding: 0 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .skill-category,
+  .project-card {
+    padding: 1.5rem;
+  }
+}

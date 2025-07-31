@@ -1,27 +1,126 @@
-/* Container that wraps the whole page */
 .layout-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure it covers the full height of the viewport */
-  }
-  
-  /* Main content area that expands to fill the remaining space */
-  .main-content {
-    flex: 1; /* This makes the main content area grow to fill available space */
-    padding: 2rem;
-    background-color: var(--background-color);
-  }
-  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
 
-/* Navbar */
-.navbar {
-    background-color: var(--navbar-background);
-    color: var(--navbar-text-color);
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
   }
-  
-/* Footer */
-  .footer {
-    background-color: var(--footer-background);
-    color: var(--footer-text-color);
+}
+
+/* Smooth transitions for theme changes */
+.layout-container * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Container for content sections */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
   }
+}
+
+/* Section spacing */
+.section {
+  margin: 4rem 0;
+}
+
+.section-sm {
+  margin: 2rem 0;
+}
+
+.section-lg {
+  margin: 6rem 0;
+}
+
+/* Grid layouts */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  background: var(--gradient-sunrise);
+  border-radius: 0 0 2rem 2rem;
+  margin-bottom: 4rem;
+}
+
+[data-theme="dark"] .hero {
+  background: var(--gradient-sunset);
+}
+
+/* Content wrapper */
+.content-wrapper {
+  background: var(--bg-secondary);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
   
