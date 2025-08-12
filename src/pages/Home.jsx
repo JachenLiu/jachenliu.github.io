@@ -12,7 +12,7 @@ export function Home() {
             Hi, I'm <span className="accent-text">Jachen Liu</span>
           </h1>
           <p className="hero-subtitle">
-            Software Engineer & Full-Stack Developer
+            Software Engineer & Tech Enthusiast
           </p>
           <p className="hero-description">
             I build innovative web applications and digital experiences with a focus on 

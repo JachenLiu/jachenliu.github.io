@@ -18,6 +18,15 @@
   --gradient-primary: linear-gradient(135deg, #faf8f5 0%, #f5f2ed 100%);
   --gradient-accent: linear-gradient(135deg, #d4a574 0%, #c19a6b 100%);
   --gradient-sunrise: linear-gradient(135deg, #faf8f5 0%, #f0ede8 50%, #e8e4df 100%);
+  
+  /* Additional variables for components */
+  --primary-color: #d4a574;
+  --secondary-color: #c19a6b;
+  --border-color: #d4cfc8;
+  --card-bg: #ffffff;
+  --bg-color: #faf8f5;
+  --text-color: #2d2a24;
+  --text-muted: #8a857d;
 }
 
 [data-theme="dark"] {
@@ -39,6 +48,15 @@
   --gradient-primary: linear-gradient(135deg, #1a1a1a 0%, #242424 100%);
   --gradient-accent: linear-gradient(135deg, #d4a574 0%, #c19a6b 100%);
   --gradient-sunset: linear-gradient(135deg, #1a1a1a 0%, #242424 50%, #2d2d2d 100%);
+  
+  /* Additional variables for components */
+  --primary-color: #d4a574;
+  --secondary-color: #c19a6b;
+  --border-color: #4a4a4a;
+  --card-bg: #242424;
+  --bg-color: #1a1a1a;
+  --text-color: #f5f2ed;
+  --text-muted: #c4c0bb;
 }
 
 /* Global Reset and Base Styles */

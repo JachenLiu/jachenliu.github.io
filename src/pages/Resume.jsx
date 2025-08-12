@@ -16,7 +16,7 @@ export function Resume() {
       </div>
 
       <div className="resume-download">
-        <a href="/Jachen_Liu_Resume.pdf" download="Jachen Liu Resume 2024.pdf" className="download-button">
+        <a href="/Jachen_Liu_Resume.pdf" download="Jachen Liu Resume 2025.pdf" className="download-button">
           Download Resume
         </a>
       </div>

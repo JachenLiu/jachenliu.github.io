@@ -9,7 +9,7 @@ export function About() {
         <section className="about-hero">
           <h1 className="about-title">About Me</h1>
           <p className="about-subtitle">
-            Software Engineer passionate about creating meaningful digital experiences
+            Tech Enthusiast passionate about creating meaningful digital experiences
           </p>
         </section>
 
@@ -19,19 +19,16 @@ export function About() {
             <div className="about-text">
               <h2>Who I Am</h2>
               <p>
-                I'm a software engineer with a passion for building innovative web applications 
-                and digital experiences. My journey in technology started with a curiosity about 
-                how things work, which led me to explore various programming languages and frameworks.
+              I’m a technology professional with a background in computer science and a passion for making systems work better together. 
+                and digital experiences. My experience spans software development, IT support, and process improvement,
+                 giving me a unique mix of technical skills and an understanding of how people use technology day-to-day.
               </p>
               <p>
-                I specialize in full-stack development with expertise in React, Node.js, and modern 
-                web technologies. I also have experience in game development using Unity and C#, 
-                creating multiplayer experiences that bring people together.
+              I approach each challenge with curiosity, adaptability, 
+              and a focus on creating practical, user-friendly solutions.
               </p>
               <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to 
-                open-source projects, or working on personal projects that challenge me to learn 
-                something new.
+                When I'm not coding, you can find me playing games, swimming, or driving around.
               </p>
             </div>
 
@@ -41,11 +38,11 @@ export function About() {
                 <p>Years Experience</p>
               </div>
               <div className="stat-card card">
-                <h3>10+</h3>
+                <h3>5+</h3>
                 <p>Projects Completed</p>
               </div>
               <div className="stat-card card">
-                <h3>5+</h3>
+                <h3>3</h3>
                 <p>Technologies Mastered</p>
               </div>
             </div>

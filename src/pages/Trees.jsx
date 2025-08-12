@@ -7,7 +7,6 @@ export function Trees() {
       <a href="/trees_density.html" >
           Trees
         </a>
-        {/* <iframe src="/trees_density.html"width={1000} height={500}></iframe> */}
     </div>
   );
 }
